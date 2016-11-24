@@ -22,7 +22,7 @@ class Dialog(QDialog, Ui_Dialog):
     def __init__(self, parent=None):
         """
         Constructor
-        
+        songList = function.getSongList()
         @param parent reference to the parent widget
         @type QWidget
         """
@@ -32,8 +32,7 @@ class Dialog(QDialog, Ui_Dialog):
         while True:
              if os.path.exists('mrock_song_client_android.xml'):
                  break
-        songList = function.getSongList()
-        self.setList(songList)
+        self.setList(Dialog.songList)
         if not(self.checkBoxIsZip.isChecked()):
             self.checkBoxIsDel.hide()
      
