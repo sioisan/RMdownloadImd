@@ -52,8 +52,8 @@ class Dialog(QDialog, Ui_Dialog):
          if downAll:
             QMessageBox.information(self, '提示', '下载文件量巨大，请不要关闭窗口')
             for i in Dialog.songList:
-                function.downSong(i[0])
-                function.getPng(i[0]+'/')
+                function.downSong(i[1])
+                function.getPng(i[1]+'/')
          function.downSong(songPath)
          function.getPng(songPath+'/')
          if isZip:
